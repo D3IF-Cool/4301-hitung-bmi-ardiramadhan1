@@ -60,12 +60,12 @@ class HitungFragment : Fragment() {
             viewModel.selesaiNavigasi()
         })
 
-
         viewModel.getHasilBmi().observe(viewLifecycleOwner, {
             if (it == null) return@observe
             binding.bmiTextView.text = getString(R.string.bmi_x, it.bmi)
-            binding.kategoriTextView.text = getString(R.string.kategori_x, getKategori(it.kategori))
-            binding.buttonGroup.visibility == View.VISIBLE
+            binding.kategoriTextView.text = getString(R.string.kategori_x,
+                getKategori(it.kategori))
+            binding.buttonGroup.visibility = View.VISIBLE
         })
     }
 
