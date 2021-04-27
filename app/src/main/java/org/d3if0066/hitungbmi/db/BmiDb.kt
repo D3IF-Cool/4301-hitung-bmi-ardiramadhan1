@@ -6,7 +6,6 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import java.security.AccessControlContext
 
-class BmiDb {
     @Database(entities = [BmiEntity::class], version = 1, exportSchema = false)
     abstract class BmiDb : RoomDatabase() {
 
@@ -35,4 +34,3 @@ class BmiDb {
             }
         }
     }
-}
